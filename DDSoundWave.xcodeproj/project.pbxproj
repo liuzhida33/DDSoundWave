@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C8BBDB391610959C901990EE /* libPods-DDSoundWave.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A49AE80629ACF61D5B8F174 /* libPods-DDSoundWave.a */; };
 		F45427112077AD7B0080BD7E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F45427102077AD7B0080BD7E /* AppDelegate.m */; };
 		F45427142077AD7B0080BD7E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F45427132077AD7B0080BD7E /* ViewController.m */; };
 		F45427172077AD7B0080BD7E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F45427152077AD7B0080BD7E /* Main.storyboard */; };
@@ -17,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A49AE80629ACF61D5B8F174 /* libPods-DDSoundWave.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DDSoundWave.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9478F23101D2AEEF012CBA8C /* Pods-DDSoundWave.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DDSoundWave.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DDSoundWave/Pods-DDSoundWave.debug.xcconfig"; sourceTree = "<group>"; };
+		AD0A19B03E5724A1D92AF8CC /* Pods-DDSoundWave.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DDSoundWave.release.xcconfig"; path = "Pods/Target Support Files/Pods-DDSoundWave/Pods-DDSoundWave.release.xcconfig"; sourceTree = "<group>"; };
 		F454270C2077AD7B0080BD7E /* DDSoundWave.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DDSoundWave.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F454270F2077AD7B0080BD7E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F45427102077AD7B0080BD7E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -36,17 +40,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8BBDB391610959C901990EE /* libPods-DDSoundWave.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E55FA92ED53B5CF4A9B0B29 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9478F23101D2AEEF012CBA8C /* Pods-DDSoundWave.debug.xcconfig */,
+				AD0A19B03E5724A1D92AF8CC /* Pods-DDSoundWave.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F45427032077AD7B0080BD7E = {
 			isa = PBXGroup;
 			children = (
 				F454270E2077AD7B0080BD7E /* DDSoundWave */,
 				F454270D2077AD7B0080BD7E /* Products */,
+				3E55FA92ED53B5CF4A9B0B29 /* Pods */,
+				FF810D062662BD3EE88E12B7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -84,6 +100,14 @@
 			path = DDSoundWave;
 			sourceTree = "<group>";
 		};
+		FF810D062662BD3EE88E12B7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3A49AE80629ACF61D5B8F174 /* libPods-DDSoundWave.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -91,6 +115,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F45427222077AD7B0080BD7E /* Build configuration list for PBXNativeTarget "DDSoundWave" */;
 			buildPhases = (
+				DFDBD217A8DF49D298479745 /* [CP] Check Pods Manifest.lock */,
 				F45427082077AD7B0080BD7E /* Sources */,
 				F45427092077AD7B0080BD7E /* Frameworks */,
 				F454270A2077AD7B0080BD7E /* Resources */,
@@ -149,6 +174,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DFDBD217A8DF49D298479745 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DDSoundWave-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F45427082077AD7B0080BD7E /* Sources */ = {
@@ -290,6 +336,7 @@
 		};
 		F45427232077AD7B0080BD7E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9478F23101D2AEEF012CBA8C /* Pods-DDSoundWave.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -303,6 +350,7 @@
 		};
 		F45427242077AD7B0080BD7E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD0A19B03E5724A1D92AF8CC /* Pods-DDSoundWave.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
