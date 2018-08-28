@@ -95,7 +95,7 @@
             }
         }];
     }else if ([[AVAudioSession sharedInstance] recordPermission] == AVAudioSessionRecordPermissionDenied) {
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"无法使用麦克风" message:@"请在iPhone的""设置-茶刻-麦克风""中打开开关" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"无法使用麦克风" message:@"请在iPhone的""设置-APP-麦克风""中打开开关" preferredStyle:UIAlertControllerStyleAlert];
         [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil]];
         [alert addAction:[UIAlertAction actionWithTitle:@"设置" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             if (@available(iOS 10, *)) {
